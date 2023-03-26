@@ -1,0 +1,27 @@
+#!/bin/bash
+ 
+#--------------------------------------------------
+# Simple script for changing brightness of monitors
+# Vostorg
+#--------------------------------------------------
+
+read -p 'select the monitor (1 2 [b]oth ): ' mon
+read -p 'enter the number of brightness (from 0.1 to 1): ' num
+
+# mon 1 :
+if [ $mon = 1 ]; then
+	xrandr --output HDMI-2 --brightness $num
+fi
+
+# mon 2 :
+if [ $mon = 2 ]; then
+	xrandr --output HDMI-1-0 --brightness $num
+fi
+
+# Both
+if [ $mon = b ]; then
+	xrandr --output HDMI-2 --brightness $num
+	xrandr --output HDMI-1-0 --brightness $num
+fi
+
+echo "done!"

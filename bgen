@@ -1,0 +1,21 @@
+#!/bin/python3
+
+import shutil
+import os
+
+blank_number = int(input("enter the number of blanks: "))
+blank_folder = r"/root/outwrite/materials"
+dest_folder = os.getcwd()
+
+def blank_generator(blank_number):
+    n = 1
+    while n <= blank_number:
+        shutil.copy(blank_folder + "/blank.txt", dest_folder)
+        os.getcwd() 
+        os.rename("blank.txt", str(n)+str(".md"))
+        n += 1
+    print("Generating...")
+    print("Done! ", blank_number, "blank(s) are made")
+
+blank_generator(blank_number)
+
