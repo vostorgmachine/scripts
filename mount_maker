@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Simple script to create folder tree really fast.
+
+mkdir -p {01..04}_week_05/{source,end,txt/{Vedomosti,TMT,Other}/done}
