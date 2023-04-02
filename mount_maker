@@ -2,4 +2,11 @@
 
 # Simple script to create folder tree really fast.
 
-mkdir -p {01..04}_week_05/{source,end,txt/{Vedomosti,TMT,Other}/done}
+# Uncomment if u want to write number manually:
+# echo ''
+# echo "Enter the number of month (like 05, 12, or something) : "
+# read month
+
+month=`date +%m`
+
+mkdir -p {01..04}_week_$month/{source,end,txt/{Vedomosti,TMT,Other}/done}
