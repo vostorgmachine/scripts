@@ -10,3 +10,7 @@
 month=`date +%m`
 
 mkdir -p {01..04}_week_$month/{source,end,txt/{Vedomosti,TMT,Other}/done}
+
+echo 
+echo -e '\033[0;32mdone!'
+echo 
