@@ -2,9 +2,6 @@
  
 pandoc *.docx -o 0_semi_done.md
  
-	# Эта строка позволяет добрасывать ноль к простым значениям дня
-sed -r -e 'sx([^0-9]|^)([0-9]...)x\10\2xg' -e 'sx/([0-9]/)x/0\1xg' 0_semi_done.md >> 0_semi_done_1.md 
-
 sed '
 
 	/[**]/s/\ января\ /.01./g
@@ -30,10 +27,9 @@ sed '
 	s/"</</g
 	s/">/>/g
 
-' 0_semi_done_1.md >> 00.txt
+' 0_semi_done.md >> 00.txt
 
 rm 0_semi_done.md
-rm 0_semi_done_1.md
 
 echo 
 echo -e '\033[0;32mdone!'
