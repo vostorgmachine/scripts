@@ -25,4 +25,3 @@ if [ $mon = b ]; then
 fi
 
 echo "done!"
-echo "done!"
