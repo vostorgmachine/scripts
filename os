@@ -22,7 +22,8 @@ sed '
 	s/»/"/g
 	s/--/-/g
 	s/--/-/g
-	s/[\"]/"/g
+	s/\"\[/\[/g
+	s/\"\]/\]/g
 	s/""/"/g
 	s/"</</g
 	s/">/>/g
@@ -32,5 +33,5 @@ sed '
 rm 0_semi_done.md
 
 echo 
-echo -e '\033[0;32mdone!'
+echo -e 'done!'
 echo 
