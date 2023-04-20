@@ -28,6 +28,10 @@ sed '
 	s/"</</g
 	s/">/>/g
 
+	# experimental one
+	s/\\"/"/g
+
+
 ' 0_semi_done.md >> 00.txt
 
 rm 0_semi_done.md

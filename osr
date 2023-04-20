@@ -3,7 +3,8 @@
 # This script allows to manage current outwrite directory i.e 
 # separate files on three groups : TMT, Vedomosti, and Other:
 
-mkdir -v TMT Vedomosti Other
+mkdir -p TMT/{done,calibration} Vedomosti/{done,calibration} Other
+
 grep -rl 'The Moscow Times' | xargs  mv -vt TMT/
 grep -rl 'Ведомости' | xargs  mv -vt Vedomosti/
 mv *.md Other/
