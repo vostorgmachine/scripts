@@ -29,7 +29,7 @@ sed '
 	s/">/>/g
 
 	# experimental one
-	s/\\"/"/g
+	s/\\//g
 
 
 ' 0_semi_done.md >> 00.txt
