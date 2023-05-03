@@ -12,7 +12,10 @@ def blank_generator(blank_number):
     while n <= blank_number:
         shutil.copy(blank_folder + "/blank.txt", dest_folder)
         os.getcwd() 
-        os.rename("blank.txt", str(n)+str(".md"))
+        if n <= 9:
+            os.rename("blank.txt", "0"+str(n)+str(".md"))
+        else:
+            os.rename("blank.txt", str(n)+str(".md"))
         n += 1
     print("Generating...")
     print("Done! ", blank_number, "blank(s) are made")
